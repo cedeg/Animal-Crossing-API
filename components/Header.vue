@@ -1,8 +1,8 @@
 <template>
   <header>
-   <div class="bg-green-400 p-4 text-white text-center">
-     <h1>{{ title }}</h1>
-   </div>
+    <div class="bg-green-400 p-4 text-white text-center">
+      <h1 class="text-2xl">{{ title }}</h1>
+    </div>
   </header>
 </template>
 
