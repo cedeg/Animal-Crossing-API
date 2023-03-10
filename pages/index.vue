@@ -1,12 +1,15 @@
 <template>
   <main>
-    <div class="wrapper p-6 flex flex-col items-center">
-      <h1 class="text-2xl font-bold text-green-400 pb-4">{{ title }}</h1>
+    <div class="wrapper p-6 flex flex-col items-center md:flex-row md:flex-wrap md:gap-2 md:justify-center">
+      <h1 class="text-2xl font-bold text-green-400 pb-4 md:w-full md:ml-12">{{ title }}</h1>
 
-      <Villagers v-for="(villager, key) in villagers" :key="key" :birthday="villager['birthday-string']"
+      <Villagers v-for="(villager) in villagers"
+                 :id="villager['id']"
+                 :key="villager['id']"
+                 :birthday="villager['birthday-string']"
                  :imageUri="villager['image_uri']"
                  :name="villager['name']['name-USen']"
-                 :personality="villager['personality']"
+                 :personality="villager['personalityy']"
 
       />
 
