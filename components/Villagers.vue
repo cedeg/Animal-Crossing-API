@@ -2,16 +2,16 @@
   <div>
     <ul>
       <li>
-        <p>Name</p>
+        <p>Nom : {{ name }}</p>
       </li>
       <li>
-        <p>Personality</p>
+        <p>Personnalité : {{ personality }}</p>
       </li>
       <li>
-        <p>birthday-string</p>
+        <p>Anniversaire: {{ birthday }}</p>
       </li>
       <li>
-        <p>image_uri</p>
+        <p>{{ imageUri }}</p>
       </li>
     </ul>
   </div>
@@ -19,7 +19,14 @@
 
 <script>
 export default {
-  name: "Villagers"
+  name: "Villagers",
+  props: {
+    name: String,
+    personality: String,
+    birthday: String,
+    imageUri: String
+
+  }
 }
 </script>
 
