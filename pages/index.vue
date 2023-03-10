@@ -1,13 +1,13 @@
 <template>
   <main>
-    <div>
-      <h1>MAIN</h1>
+    <div class="wrapper p-6 flex flex-col items-center">
+      <h1 class="text-2xl font-bold text-green-400 pb-4">{{ title }}</h1>
 
-      <Villagers v-for="(villager, key) in villagers" :key="key"
-                 :birthday="villager['birthday-string']"
+      <Villagers v-for="(villager, key) in villagers" :key="key" :birthday="villager['birthday-string']"
                  :imageUri="villager['image_uri']"
                  :name="villager['name']['name-USen']"
                  :personality="villager['personality']"
+
       />
 
     </div>
@@ -15,7 +15,6 @@
 </template>
 
 <script>
-
 
 import Villagers from "~/components/Villagers.vue";
 
@@ -26,7 +25,8 @@ export default {
 
   data() {
     return {
-      villagers: []
+      villagers: [],
+      title: "Liste des habitants :"
     }
   },
 
