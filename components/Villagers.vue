@@ -1,6 +1,7 @@
 <template>
 
   <ul>
+    <!--TODO faire l'iD-->
     <li class="px-2">
       <AnimalDescription :text="name" title="Nom"/>
     </li>
