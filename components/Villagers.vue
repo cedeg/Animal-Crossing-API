@@ -14,9 +14,11 @@
       <li class="px-2">
         <AnimalDescription :text="id" title="id"/>
       </li>
-      <li class="py-2">
-        <NuxtLink :to="'/villageois/' + id">
-          <ImageComponent :alt="name" :image-url="imageUri"/>
+      <li class="py-2 relative ease-in-out duration-300 hover:scale-125">
+        <NuxtLink :to="'/villageois/' + id" class="">
+          <p class="absolute inset-1/3  opacity-50  text-xl text-white ">Voir
+            plus</p>
+          <ImageComponent :alt="name" :image-url="imageUri" class="rounded"/>
         </NuxtLink>
 
       </li>

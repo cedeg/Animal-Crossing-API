@@ -22,7 +22,7 @@
           <AnimalDescription :text="villager.gender" title="Genre"/>
         </li>
         <li class="px-2">
-          <AnimalDescription :text="villager.hobby" title="Hobby"/>
+          <AnimalDescription :text="villager.hobby" class="rounded" title="Hobby"/>
         </li>
         <li class="px-2 pt-2">
           <NuxtLink
