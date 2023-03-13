@@ -1,7 +1,8 @@
 <template>
   <main>
-    <div class="wrapper p-6 flex flex-col items-center md:flex-row md:flex-wrap md:gap-2 md:justify-center">
-      <ul>
+    <div
+      class="wrapper p-6 flex flex-col items-center md:flex-row md:flex-wrap md:gap-2 md:justify-center md:items-start">
+      <ul class="pt-2">
         <li class="px-2">
           <AnimalDescription :text="villager.id" title="id"/>
         </li>
@@ -23,11 +24,19 @@
         <li class="px-2">
           <AnimalDescription :text="villager.hobby" title="Hobby"/>
         </li>
-        <li class="py-2">
-          <ImageComponent :alt="name" :image-url="villager.image_uri"/>
+        <li class="px-2 pt-2">
+          <NuxtLink
+            class="bg-green-400 p-2 rounded text-white hover:bg-white hover:text-green-400 ease-in-out duration-300"
+            to="/">
+            Back
+          </NuxtLink>
         </li>
 
+
       </ul>
+      <div class="py-2">
+        <ImageComponent :alt="name" :image-url="villager.image_uri"/>
+      </div>
     </div>
 
   </main>
