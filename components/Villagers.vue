@@ -1,20 +1,28 @@
 <template>
+  <main>
+    <ul>
+      <!-- faire l'iD-->
+      <li class="px-2">
+        <AnimalDescription :text="name" title="Nom"/>
+      </li>
+      <li class="px-2">
+        <AnimalDescription :text="personality" title="Personalité"/>
+      </li>
+      <li class="px-2">
+        <AnimalDescription :text="birthday" title="Anniversaire"/>
+      </li>
+      <li class="px-2">
+        <AnimalDescription :text="id" title="id"/>
+      </li>
+      <li class="py-2">
+        <NuxtLink :to="'/villageois/' + id">
+          <ImageComponent :alt="name" :image-url="imageUri"/>
+        </NuxtLink>
 
-  <ul>
-    <!--TODO faire l'iD-->
-    <li class="px-2">
-      <AnimalDescription :text="name" title="Nom"/>
-    </li>
-    <li class="px-2">
-      <AnimalDescription :text="personality" title="Personalité"/>
-    </li>
-    <li class="px-2">
-      <AnimalDescription :text="birthday" title="Anniversaire"/>
-    </li>
-    <li class="py-2">
-      <ImageComponent :alt="name" :image-url="imageUri"/>
-    </li>
-  </ul>
+      </li>
+    </ul>
+  </main>
+
 
 </template>
 
@@ -31,10 +39,11 @@ export default {
     personality: String,
     birthday: String,
     imageUri: String,
-    id: Number
+    id: Number,
 
   }
 }
+
 </script>
 
 <style scoped>

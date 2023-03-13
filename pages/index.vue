@@ -33,22 +33,11 @@ export default {
     }
   },
 
-  /*activated() {
-    if (this.$fetchState.timestamp <= Date.now() - 60000) {
-      this.$fetch();
-    }
-  },
-*/
   async asyncData({$axios}) {
     const villagers = await $axios.$get('https://acnhapi.com/v1/villagers/');
 
     return {villagers}
   }
-
-  /*  async fetch() {
-      this.villagers = await fetch('https://acnhapi.com/v1/villagers/').then((res) => res.json());
-    }*/
-
-
+  
 }
 </script>
