@@ -1,5 +1,5 @@
 <template>
-  <main>
+
     <ul>
       <!-- faire l'iD-->
       <li class="px-2">
@@ -23,7 +23,7 @@
 
       </li>
     </ul>
-  </main>
+
 
 
 </template>
